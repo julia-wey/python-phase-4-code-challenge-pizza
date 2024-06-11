@@ -85,7 +85,7 @@ class TestApp:
         with app.app_context():
             response = app.test_client().get('/restaurants/0')
             assert response.status_code == 404
-            assert response.json.get('error') == "Restaurant not found"
+            assert response.json.get('error') == "Restaurant not found."
 
     def test_pizzas(self):
         """retrieves pizzas with GET request to /pizzas"""
